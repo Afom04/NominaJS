@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+  <head>
+    <title>Nomina JS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Nómina en JavaScript</h1>
+    </header>
+
+    <section class="contenedor">
+      <form>
+        <fieldset class="formulario">
+          <label for="txtNombre"> Nombre del empleado </label>
+          <input type="text" name="txtNombre" id="txtNombre" required />
+
+          <label for="txtId"> Identificación del empleado </label>
+          <input type="text" name="txtId" id="txtId" required />
+
+          <label for="cmbSalarioBase"> Salario base del empleado </label>
+          <select id="cmbSalarioBase" name="cmbSalarioBase">
+            <option value="1300000">$1.300.000</option>
+            <option value="2600000">$2.600.000</option>
+            <option value="3900000">$3.900.000</option>
+            <option value="5200000">$5.200.000</option>
+            <option value="6500000">$6.500.000</option>
+          </select>
+
+          <label for="txtDias"> Días trabajados del empleado </label>
+          <input
+            type="number"
+            name="txtDias"
+            id="txtDias"
+            min="1"
+            max="30"
+            required
+          />
+
+          <input
+            type="button"
+            id="subir"
+            onclick="controlador.controlCalcularNomina()"
+            value="Calcular Nómina"
+          />
+          <input type="reset" value="Limpiar" />
+        </fieldset>
+      </form>
+    </section>
+    <section class="resultado">
+      <h3>Resultado de la operación</h3>
+      <div id="resultadoDiv">
+        <table border="1" id="tablaResultado">
+          <tr>
+            <td>Empleado</td>
+            <td>ID</td>
+            <td>Salario Base</td>
+            <td>Salario Diario</td>
+            <td>Dias Trabajados</td>
+            <td>Salud</td>
+            <td>Pensión</td>
+            <td>Auxilio de Transporte</td>
+            <td>Salario Devengado</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <footer>
+      <br />
+      <p>Realizado en 2024</p>
+    </footer>
+    <script src="js/control.js"></script>
+    <script src="js/modelo.js"></script>
+  </body>
+</html>
